@@ -11,6 +11,8 @@ URL:           http://www.gnu.org/software/emacs/
 Group:         Applications/Editors
 Source0:       https://ftp.gnu.org/gnu/emacs/emacs-%{version}.tar.xz
 
+BuildRequires: make
+BuildRequires: autoconf
 BuildRequires: texinfo
 BuildRequires: gcc
 BuildRequires: dbus-devel
