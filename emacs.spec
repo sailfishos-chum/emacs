@@ -4,8 +4,8 @@
 Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         1
-Version:       26.1
-Release:       2%{?dist}
+Version:       26.2
+Release:       1%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
 Group:         Applications/Editors
@@ -71,7 +71,6 @@ cp src/emacs-module.h %{buildroot}%{_includedir}
 rm -f %{buildroot}%{_infodir}/info.info.gz
 rm -f %{buildroot}%{_infodir}/dir
 rm %{buildroot}%{_datadir}/applications/emacs.desktop
-rm %{buildroot}%{_datadir}/appdata/emacs.appdata.xml
 rm -rf %{buildroot}%{_datadir}/icons
 rm %{buildroot}%{_libdir}/systemd/user/emacs.service
 
@@ -106,6 +105,8 @@ done
 %{_includedir}/emacs-module.h
 
 %changelog
+* Sat Apr 20 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.2-1
+- New upstream release
 * Wed Jan 23 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.1-2
 - Fix timestamp of precompiled lisp files.
 * Sun Jan 06 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.1-1
