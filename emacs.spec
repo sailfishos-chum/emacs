@@ -4,7 +4,7 @@
 Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         1
-Version:       26.2
+Version:       26.3
 Release:       1%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
@@ -105,6 +105,8 @@ done
 %{_includedir}/emacs-module.h
 
 %changelog
+* Sun Sep 8 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.3-1
+- New upstream release
 * Sat Apr 20 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.2-1
 - New upstream release
 * Wed Jan 23 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.1-2
