@@ -4,7 +4,7 @@
 Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         1
-Version:       26.3
+Version:       27.2
 Release:       1%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
@@ -21,6 +21,8 @@ BuildRequires: ncurses-devel
 BuildRequires: zlib-devel
 BuildRequires: gnutls-devel
 BuildRequires: libxml2-devel
+BuildRequires: systemd-devel
+BuildRequires: gmp-devel
 BuildRequires: bzip2
 BuildRequires: gzip
 
@@ -101,10 +103,15 @@ done
 %{_datadir}/emacs/%{version}/lisp
 %{_datadir}/emacs/%{version}/site-lisp
 %{_datadir}/emacs/site-lisp
+%{_datadir}/metainfo/emacs.appdata.xml
 %{_libexecdir}/emacs
 %{_includedir}/emacs-module.h
 
 %changelog
+* Sun Mar 28 2021 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.2-1
+- New upstream release
+* Mon Dec 7 2020 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.1-1
+- New upstream release
 * Sun Sep 8 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.3-1
 - New upstream release
 * Sat Apr 20 2019 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:26.2-1
