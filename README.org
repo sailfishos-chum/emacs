@@ -1,0 +1,1 @@
+Emacs RPM for Sailfish OS

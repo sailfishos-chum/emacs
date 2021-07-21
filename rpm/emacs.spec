@@ -3,13 +3,13 @@
 # This file is encoded in UTF-8.  -*- coding: utf-8 -*-
 Summary:       GNU Emacs text editor
 Name:          emacs
-Epoch:         1
+Epoch:         2
 Version:       27.2
-Release:       1%{?dist}
+Release:       2%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
 Group:         Applications/Editors
-Source0:       https://ftp.gnu.org/gnu/emacs/emacs-%{version}.tar.xz
+Source0:       %{name}-%{version}.tar.xz
 
 BuildRequires: make
 BuildRequires: autoconf
@@ -40,7 +40,12 @@ This package provides an emacs binary with no X windows support for running
 on a terminal.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}/emacs
+
+%build
+./autogen.sh
+%configure --with-x-toolkit=no --with-modules
+make %{?_smp_mflags} bootstrap
 
 # Sorted list of info files
 %define info_files ada-mode auth autotype bovine calc ccmode cl dbus dired-x ebrowse ede ediff edt efaq efaq-w32 eieio eintr elisp emacs-gnutls emacs emacs-mime epa erc ert eshell eudc eww flymake forms gnus htmlfontify idlwave ido info mairix-el message mh-e newsticker nxml-mode octave-mode org pcl-cvs pgg rcirc reftex remember sasl sc semantic ses sieve smtpmail speedbar srecode todo-mode tramp url vhdl-mode viper vip widget wisent woman
@@ -58,10 +63,6 @@ for i in $(seq 0 $(( ${#fs[*]} - 1 ))); do
     fi
 done
 cd ..
-
-%build
-%configure --with-x-toolkit=no --with-modules
-make %{?_smp_mflags} bootstrap
 
 %install
 make install DESTDIR=%{buildroot}
@@ -108,6 +109,8 @@ done
 %{_includedir}/emacs-module.h
 
 %changelog
+* Wed Jul 21 2021 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.2-2
+- Integrate build into OBS
 * Sun Mar 28 2021 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.2-1
 - New upstream release
 * Mon Dec 7 2020 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.1-1
