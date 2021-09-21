@@ -5,7 +5,7 @@ Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         2
 Version:       27.2
-Release:       2%{?dist}
+Release:       3%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
 Group:         Applications/Editors
@@ -19,7 +19,7 @@ BuildRequires: dbus-devel
 BuildRequires: glibc-devel
 BuildRequires: ncurses-devel
 BuildRequires: zlib-devel
-BuildRequires: gnutls-devel
+BuildRequires: gnutls37-devel
 BuildRequires: libxml2-devel
 BuildRequires: systemd-devel
 BuildRequires: gmp-devel
