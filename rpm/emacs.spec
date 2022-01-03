@@ -39,6 +39,17 @@ without leaving the editor.
 This package provides an emacs binary with no X windows support for running
 on a terminal.
 
+Type: console-application
+Categories:
+  - Development
+  - Office
+  - TextEditor
+Custom:
+  Repo: https://github.com/sailfishos-chum/emacs
+Icon: https://www.gnu.org/software/emacs/images/emacs.png
+Screenshots:
+  - https://www.gnu.org/software/emacs/images/teaser.png
+
 %prep
 %setup -q -n %{name}-%{version}/emacs
 
