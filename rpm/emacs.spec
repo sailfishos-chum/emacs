@@ -1,10 +1,11 @@
 %global _hardened_build 1
+%define mainversion 27.2
 
 # This file is encoded in UTF-8.  -*- coding: utf-8 -*-
 Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         2
-Version:       27.2
+Version:       %{mainversion}
 Release:       3%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
@@ -99,7 +100,7 @@ for f in %{info_files}; do
 done
 
 %files
-%{_bindir}/emacs-%{version}
+%{_bindir}/emacs-%{mainversion}
 %{_bindir}/emacs
 
 %license etc/COPYING
@@ -110,10 +111,10 @@ done
 %{_bindir}/etags
 %{_mandir}/*/*
 %{_infodir}/*
-%dir %{_datadir}/emacs/%{version}
-%{_datadir}/emacs/%{version}/etc
-%{_datadir}/emacs/%{version}/lisp
-%{_datadir}/emacs/%{version}/site-lisp
+%dir %{_datadir}/emacs/%{mainversion}
+%{_datadir}/emacs/%{mainversion}/etc
+%{_datadir}/emacs/%{mainversion}/lisp
+%{_datadir}/emacs/%{mainversion}/site-lisp
 %{_datadir}/emacs/site-lisp
 %{_datadir}/metainfo/emacs.appdata.xml
 %{_libexecdir}/emacs
