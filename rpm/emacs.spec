@@ -1,12 +1,12 @@
 %global _hardened_build 1
-%define mainversion 27.2
+%define mainversion 28.1
 
 # This file is encoded in UTF-8.  -*- coding: utf-8 -*-
 Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         2
 Version:       %{mainversion}
-Release:       3%{?dist}
+Release:       1%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
 Group:         Applications/Editors
@@ -26,6 +26,7 @@ BuildRequires: systemd-devel
 BuildRequires: gmp-devel
 BuildRequires: bzip2
 BuildRequires: gzip
+BuildRequires: git
 
 Requires(preun): /sbin/install-info
 Requires(post): /sbin/install-info
@@ -116,11 +117,16 @@ done
 %{_datadir}/emacs/%{mainversion}/lisp
 %{_datadir}/emacs/%{mainversion}/site-lisp
 %{_datadir}/emacs/site-lisp
-%{_datadir}/metainfo/emacs.appdata.xml
+%{_datadir}/applications/emacs-mail.desktop
+%{_datadir}/applications/emacsclient-mail.desktop
+%{_datadir}/applications/emacsclient.desktop
+%{_datadir}/metainfo/emacs.metainfo.xml
 %{_libexecdir}/emacs
 %{_includedir}/emacs-module.h
 
 %changelog
+* Tue Apr 5 2022 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:28.1-1
+- New upstream release
 * Wed Jul 21 2021 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.2-2
 - Integrate build into OBS
 * Sun Mar 28 2021 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.2-1
