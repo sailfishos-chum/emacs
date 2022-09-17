@@ -1,5 +1,5 @@
 %global _hardened_build 1
-%define mainversion 28.1
+%define mainversion 28.2
 
 # This file is encoded in UTF-8.  -*- coding: utf-8 -*-
 Summary:       GNU Emacs text editor
@@ -125,6 +125,8 @@ done
 %{_includedir}/emacs-module.h
 
 %changelog
+* Sat Sep 17 2022 Renaud Casenave-Péré < renaud@casenave-pere.fr> - 1:28.2-1
+- New upstream release
 * Tue Apr 5 2022 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:28.1-1
 - New upstream release
 * Wed Jul 21 2021 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:27.2-2
