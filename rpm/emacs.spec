@@ -1,10 +1,10 @@
 %global _hardened_build 1
-%define mainversion 28.2
+%define mainversion 29.1
 
 # This file is encoded in UTF-8.  -*- coding: utf-8 -*-
 Summary:       GNU Emacs text editor
 Name:          emacs
-Epoch:         2
+Epoch:         1
 Version:       %{mainversion}
 Release:       1%{?dist}
 License:       GPLv3+ and CC0-1.0
@@ -125,6 +125,8 @@ done
 %{_includedir}/emacs-module.h
 
 %changelog
+* Mon Sep 25 2023 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:29.1-1
+- New upstream release
 * Sat Sep 17 2022 Renaud Casenave-Péré < renaud@casenave-pere.fr> - 1:28.2-1
 - New upstream release
 * Tue Apr 5 2022 Renaud Casenave-Péré <renaud@casenave-pere.fr> - 1:28.1-1
